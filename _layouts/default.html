@@ -98,8 +98,23 @@
 	<!-- FADE -->
 
 	<main id="container" class="container-fluid">
+		{% if page.url != '/index.html' %}
+			<div id="content" class="container">
+				<div class="row">
+					<div class="col-md-10 col-md-offset-1">
+						<div class="col-md-1 col-md-offset-2 text-center"><span class="glyphicon glyphicon-{{page.glyphicon}} icone-pagina"></span></div>
+						<div class="col-md-9"><h2>{{page.title}}</h2></div>
+		{% endif %}
 
-	{{content}}
+					{{content}}
+		{% if page.url != '/index.html' %}
+					</div>
+					<!-- /.col-md-8 col-md-offset-2 -->
+				</div>
+				<!-- /.row -->
+			</div>
+			<!-- /.container -->
+		{% endif %}
 
 	</main>
 	<!-- #container -->
