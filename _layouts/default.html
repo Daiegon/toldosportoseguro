@@ -1,0 +1,154 @@
+<!DOCTYPE hmtl>
+<html lang="pt-BR">
+	<head>
+		<title>Toldos Porto Seguro</title>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, inicial-scale=1, maximum-scale=1, user-scalable=no"/>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="author" content="">
+
+		<link rel="stylesheet" href="{{site.baseurl}}/source/css/bootstrap.min.css">
+		<link rel="stylesheet" href="{{site.baseurl}}/source/css/style.css">
+		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	</head>
+<body>
+	
+	<!-- WRAPPER MENU -->
+
+	<header class="navbar navbar-fixed-top header">
+		<div class="row top">
+			<div class="container">
+				<div class="col-xs-2 menu menu-btn visible-sm visible-xs">
+					<span class="glyphicon glyphicon-menu-hamburger"></span>
+					<select>
+						<option value="#" selected disabled> - MENU -</option>
+						<option value="{{site.baseurl}}/">HOME</option>
+						<option value="{{site.baseurl}}/faq.html">FAQ</option>
+						<option value="{{site.baseurl}}/galeria.html">GALERIA</option>
+						<option value="{{site.baseurl}}/orcamento.html">ORÇAMENTO</option>
+						<option value="{{site.baseurl}}/empresa.html">A EMPRESA</option>
+					</select>
+				</div>
+				<div class="logo col-xs-8 col-md-3 text-center">
+					<h1>
+						<a href="{{site.baseurl}}/" title="Toldos Porto Seguro">
+							<img src="{{site.baseurl}}/source/images/toldos-porto-seguro.png" alt="Toldos Porto Seguro" width="300" class="hidden-sm hidden-xs img-responsive">
+							<p class="hidden-lg hidden-md">Toldos Porto Seguro</p>
+						</a>
+					</h1>
+				</div>
+				<!-- /.logo -->
+				<nav class="menu-md col-md-7 col-lg-6 col-lg-offset-1 hidden-sm hidden-xs">
+					{% include nav.html %}
+				</nav>
+				<div class="col-md-2 telefone-md hidden-sm hidden-xs text-center ligue">
+					<div class="btn-ligue"><small>LIGUE:</small><br> (21) 3069-2270</div>
+				</div>
+				<div class="info col-xs-2 menu-btn visible-sm visible-xs">
+					<a class="glyphicon glyphicon-info-sign" aria-hidden="true" href="#" id="info-toggle"></a>
+				</div>
+			</div>
+			<!-- /.container -->
+		</div>
+		<!-- /.row -->
+	</header>
+	<!-- /header -->
+
+	<div class="navbar navbar-fixed-bottom header hidden-md hidden-lg">
+		<div class="row bottom">
+			<div class="container btn-ligue-sm">
+				<div class="col-xs-12">
+					<a href="javascript:void" data-toggle="modal" data-target="#telefones"><span class="glyphicon glyphicon-earphone"></span>Ligar</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal -->
+	<div id="telefones" class="modal fade" role="dialog">
+	  <div class="modal-dialog modal-sm">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">Selecione o Número para Ligação</h4>
+	      </div>
+	      <div class="modal-body">
+	      	<div class="row">
+	      		<div class="col-xs-6">
+	      			<a href="tel:02130692270" class="btn btn-dark">FIXO -RJ</a>
+	      		</div>
+	      		<div class="col-xs-6">
+	      			<a href="tel:02130692270" class="btn btn-dark">CELULAR -RJ</a>
+	      		</div>
+	      	</div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- Modal -->
+
+
+	<!-- FADE -->
+
+	<main id="container" class="container-fluid">
+
+	{{content}}
+
+	</main>
+	<!-- #container -->
+
+		<footer id="footer" class="container-fluid">
+		<div class="row">
+			<div class="container text-center">
+				<div class="col-xs-12">
+					<img src="{{site.baseurl}}/source/images/logo-azul.png" alt="">
+				</div>
+				<!-- /.col-xs-12 -->
+				<div class="col-xs-12 copyright">
+					<p>&copy; Toldos Porto Seguro 2015</p>
+				</div>
+				<!-- /.col-xs-12 -->
+			</div>
+			<!-- /.container -->
+		</div>
+		<!-- /.row -->
+	</footer>
+
+	<script src="{{site.baseurl}}/source/js/jquery.js"></script>
+	<script src="{{site.baseurl}}/source/js/bootstrap.min.js"></script>
+
+	<script>
+	    $(".list-group-item").click(function(e) { e.preventDefault(); });
+
+	    $(document).ready(function(){
+	    	/*
+	    	var bgCounter = 0,
+		        backgrounds = [
+		           "source/images/slide/1.jpg",
+		           "source/images/slide/2.jpg",
+		           "source/images/slide/3.jpg",
+		           "source/images/slide/4.jpg"
+		        ];
+			    function changeBackground()
+			    {
+			        bgCounter = (bgCounter+1) % backgrounds.length;
+			        $('body').fadeTo('slow', 0.3, function(){
+					   $('body').css('background-image', 'url('+backgrounds[bgCounter]+')');
+					}).fadeTo('slow', 1);
+			        setTimeout(changeBackground, 5000);
+
+			    }
+			    changeBackground();
+			    */
+	    });
+    </script>
+		<!-- Menu Toggle Script -->
+</body>
+</html>
