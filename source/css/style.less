@@ -3,7 +3,7 @@
 /* VARIAVEIS */
 @principal : #083766;
 @secundaria : #2687e9;
-@contraste: #1baa2c;
+@contraste: #F0AD4E;
 @clara : #fff;
 @escura : #041c35;
 @bg : #fff;
@@ -131,7 +131,7 @@ body{
 				}
 				&.current{
 					background-color:  @escura;
-    				color:@secundaria;
+    				color: @contraste;
 				}
     		}
     		
@@ -142,7 +142,7 @@ body{
 
 	.btn-ligue{
 		margin-top: 20px;
-		padding: 10px 25px;
+		padding: 10px 5px;
 		border: 2px solid @clara;
 		border-radius: 10px;
 		color: @clara;
@@ -163,7 +163,7 @@ body{
 		}
 
 		.btn-ligue-sm{
-			background-color: @contraste;
+			background-color: #1baa2c;
 		}
 
 		a{	
@@ -230,7 +230,7 @@ body{
 	}
 	#content{
 		background: @clara;
-		
+		min-height: 800px;
 		.icone-pagina{
 			font-size: 3em;
 			margin:15px 0 0 0;
@@ -269,6 +269,26 @@ body{
 				font-weight: bold;
 				color: @principal;
 				font-size: 2em;
+			}
+		}
+
+		.galeria{
+			padding: 0;
+			li {
+			  list-style:none;
+			  margin-bottom:25px;
+				img {
+				  cursor: pointer;
+				}
+			}
+		}
+		.controles-galeria{
+			margin-top:10px;
+			a{
+				width: 100%;
+				span{
+					font-size: 1.5em;
+				}
 			}
 		}
 	}
@@ -317,6 +337,10 @@ footer{
 		border: 2px solid @principal;
 		color: @principal;
 	}
+}
+
+.btn-warning{
+	color:@escura;
 }
 
 /**** SMALL SCREEN col-sm ******/

@@ -44,7 +44,7 @@
 					{% include nav.html %}
 				</nav>
 				<div class="col-md-2 telefone-md hidden-sm hidden-xs text-center ligue">
-					<div class="btn-ligue"><small>LIGUE:</small><br> (21) 3069-2270</div>
+					<div class="btn-ligue"><small>LIGUE:</small><br> ( 21 ) 3069-2270</div>
 				</div>
 				<!-- <div class="info col-xs-2 menu-btn visible-sm visible-xs">
 					<a class="glyphicon glyphicon-info-sign" aria-hidden="true" href="#" id="info-toggle"></a>
@@ -139,31 +139,6 @@
 	<script src="{{site.baseurl}}/source/js/jquery.js"></script>
 	<script src="{{site.baseurl}}/source/js/bootstrap.min.js"></script>
 
-	<script>
-	    $(".list-group-item").click(function(e) { e.preventDefault(); });
-
-	    $(document).ready(function(){
-	    	/*
-	    	var bgCounter = 0,
-		        backgrounds = [
-		           "source/images/slide/1.jpg",
-		           "source/images/slide/2.jpg",
-		           "source/images/slide/3.jpg",
-		           "source/images/slide/4.jpg"
-		        ];
-			    function changeBackground()
-			    {
-			        bgCounter = (bgCounter+1) % backgrounds.length;
-			        $('body').fadeTo('slow', 0.3, function(){
-					   $('body').css('background-image', 'url('+backgrounds[bgCounter]+')');
-					}).fadeTo('slow', 1);
-			        setTimeout(changeBackground, 5000);
-
-			    }
-			    changeBackground();
-			    */
-	    });
-    </script>
-		<!-- Menu Toggle Script -->
+	{% include scripts.html %}
 </body>
 </html>
