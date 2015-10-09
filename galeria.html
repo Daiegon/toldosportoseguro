@@ -4,52 +4,79 @@ title: Galeria de Fotos
 glyphicon:  picture
 ---		
 
-<ul class="galeria">
-	<li class="col-lg-3 col-md-3 col-sm-3 col-xs-4">
-		<a href="{{site.baseurl}}/source/images/galeria/1-1.jpg" class="thumbnail">
-			<img src="{{site.baseurl}}/source/images/galeria/1-1_menor.jpg" alt="">
-		</a>
-	</li>
-	<li class="col-lg-3 col-md-3 col-sm-3 col-xs-4">
-		<a href="{{site.baseurl}}/source/images/galeria/7-1.jpg" class="thumbnail">
-			<img src="{{site.baseurl}}/source/images/galeria/7-1_menor.jpg" alt="">
-		</a>
-	</li>
-	<li class="col-lg-3 col-md-3 col-sm-3 col-xs-4">
-		<a href="{{site.baseurl}}/source/images/galeria/8-1.jpg" class="thumbnail">
-			<img src="{{site.baseurl}}/source/images/galeria/8-1_menor.jpg" alt="">
-		</a>
-	</li>
-	<li class="col-lg-3 col-md-3 col-sm-3 col-xs-4">
-		<a href="{{site.baseurl}}/source/images/galeria/9-1.jpg" class="thumbnail">
-			<img src="{{site.baseurl}}/source/images/galeria/9-1_menor.jpg" alt="">
-		</a>
-	</li>
-	<li class="col-lg-3 col-md-3 col-sm-3 col-xs-4">
-		<a href="{{site.baseurl}}/source/images/galeria/11-1.jpg" class="thumbnail">
-			<img src="{{site.baseurl}}/source/images/galeria/11-1_menor.jpg" alt="">
-		</a>
-	</li>
-	<li class="col-lg-3 col-md-3 col-sm-3 col-xs-4">
-		<a href="{{site.baseurl}}/source/images/galeria/12-1.jpg" class="thumbnail">
-			<img src="{{site.baseurl}}/source/images/galeria/12-1_menor.jpg" alt="">
-		</a>
-	</li>
-	<li class="col-lg-3 col-md-3 col-sm-3 col-xs-4">
-		<a href="{{site.baseurl}}/source/images/galeria/13-1.jpg" class="thumbnail">
-			<img src="{{site.baseurl}}/source/images/galeria/13-1_menor.jpg" alt="">
-		</a>
-	</li>
-	<li class="col-lg-3 col-md-3 col-sm-3 col-xs-4">
-		<a href="{{site.baseurl}}/source/images/galeria/14-1.jpg" class="thumbnail">
-			<img src="{{site.baseurl}}/source/images/galeria/14-1_menor.jpg" alt="">
-		</a>
-	</li>
+<div class="galeria-fotos">
 
-</ul>
+	<div class="clearfix"></div><!-- /.clearfix -->
+
+	<h3>&raquo; Toldos</h3>
+	<ul class="galeria">
+		{% for galeria in site.data.toldos %}
+		<li class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+			<a href="{{site.baseurl}}/source/images/galeria/{{galeria.imagem}}.jpg" class="thumbnail">
+				<img src="{{site.baseurl}}/source/images/galeria/{{galeria.imagem}}_menor.jpg" alt="">
+			</a>
+		</li>
+		{% endfor %}
+	</ul>
+	
+	<div class="clearfix"></div><!-- /.clearfix -->
+
+	<h3>&raquo; Toldo com Braço Articulado</h3>
+	<ul class="galeria">
+		{% for galeria in site.data.braco-articulado %}
+		<li class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+			<a href="{{site.baseurl}}/source/images/galeria/{{galeria.imagem}}.jpg" class="thumbnail">
+				<img src="{{site.baseurl}}/source/images/galeria/{{galeria.imagem}}_menor.jpg" alt="">
+			</a>
+		</li>
+		{% endfor %}
+	</ul>
+
+	<div class="clearfix"></div><!-- /.clearfix -->
+
+	<h3>&raquo; Toldo Cortina</h3>
+	<ul class="galeria">
+		{% for galeria in site.data.toldo-cortina %}
+		<li class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+			<a href="{{site.baseurl}}/source/images/galeria/{{galeria.imagem}}.jpg" class="thumbnail">
+				<img src="{{site.baseurl}}/source/images/galeria/{{galeria.imagem}}_menor.jpg" alt="">
+			</a>
+		</li>
+		{% endfor %}
+	</ul>
+
+	<div class="clearfix"></div><!-- /.clearfix -->
+
+	<h3>&raquo; Toldo Fixo</h3>
+	<ul class="galeria">
+		{% for galeria in site.data.toldo-fixo %}
+		<li class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+			<a href="{{site.baseurl}}/source/images/galeria/{{galeria.imagem}}.jpg" class="thumbnail">
+				<img src="{{site.baseurl}}/source/images/galeria/{{galeria.imagem}}_menor.jpg" alt="">
+			</a>
+		</li>
+		{% endfor %}
+	</ul>
+
+	<div class="clearfix"></div><!-- /.clearfix -->
+
+	<h3>&raquo; Capota para Janelas</h3>
+	<ul class="galeria">
+		{% for galeria in site.data.capota %}
+		<li class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+			<a href="{{site.baseurl}}/source/images/galeria/{{galeria.imagem}}.jpg" class="thumbnail">
+				<img src="{{site.baseurl}}/source/images/galeria/{{galeria.imagem}}_menor.jpg" alt="">
+			</a>
+		</li>
+		{% endfor %}
+	</ul>
+
+</div>
+<!-- /.galeria-fotos -->
+
 
 <div class="modal fade" id="galeria" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-body">
       </div>

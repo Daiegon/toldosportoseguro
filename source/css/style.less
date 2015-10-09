@@ -6,7 +6,7 @@
 @contraste: #F0AD4E;
 @clara : #fff;
 @escura : #041c35;
-@bg : #fff;
+@bg : #eee;
 @bg-contraste : #ddd;
 
 body{
@@ -91,6 +91,7 @@ body{
 		h1{
 			margin: 10px 0 0 0;
 			height: 50px;
+			text-transform: uppercase;
 			a{
 				display: inline-block;
 				padding: 5px;
@@ -231,17 +232,21 @@ body{
 	#content{
 		background: @clara;
 		min-height: 800px;
-		.icone-pagina{
-			font-size: 3em;
-			margin:15px 0 0 0;
-			color: @escura;
-		}
 
-		h2{
-			text-align: center;
-			text-transform: uppercase;
-			margin-bottom: 20px;
-			color: @escura;
+		.page-title{
+			padding-top: 10px;
+			.icone-pagina{
+				font-size: 3em;
+				margin:15px 0 0 0;
+				color: @escura;
+			}
+
+			h2{
+				text-align: center;
+				text-transform: uppercase;
+				margin-bottom: 20px;
+				color: @escura;
+			}
 		}
 
 		.destaques{
@@ -269,6 +274,12 @@ body{
 				font-weight: bold;
 				color: @principal;
 				font-size: 2em;
+			}
+		}
+
+		.list-group{
+			.list-group-item-heading{
+				text-transform: uppercase;
 			}
 		}
 

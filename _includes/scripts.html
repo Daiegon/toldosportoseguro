@@ -23,7 +23,7 @@
 		    */
 		{% if page.url == '/galeria.html' %}
 
-			$('li a').on('click',function(){
+			$('ul.galeria li a').on('click',function(){
 
 			    var src = $(this).attr('href');
 			    var img = '<img src="' + src + '" class="img-responsive"/>';
