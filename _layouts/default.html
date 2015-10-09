@@ -22,7 +22,7 @@
 			<div class="container">
 				<div class="col-xs-2 menu menu-btn visible-sm visible-xs">
 					<span class="glyphicon glyphicon-menu-hamburger"></span>
-					<select>
+					<select onchange="location = this.options[this.selectedIndex].value;">
 						<option value="#" selected disabled> - MENU -</option>
 						<option value="{{site.baseurl}}/">HOME</option>
 						<option value="{{site.baseurl}}/faq.html">FAQ</option>
