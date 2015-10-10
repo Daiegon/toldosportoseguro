@@ -21,6 +21,16 @@
 		    }
 		    changeBackground();
 		    */
+		$.urlParam = function(name){
+			var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+			return results[1] || 0;
+		}
+		var envio = $.urlParam(envio);
+
+		if(envio == 'ok'){
+			window.alert('');
+		}
+
 		{% if page.url == '/galeria.html' %}
 
 			$('ul.galeria li a').on('click',function(){
@@ -51,6 +61,7 @@
 			});
 
 		{% endif %}
+
     });
 	$(document).on('click', 'a.controls', function(){
 	    var index = $(this).attr('href');

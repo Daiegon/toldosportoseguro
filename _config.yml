@@ -9,9 +9,6 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://toldosportoseguro.com.br" # the base hostname & protocol for your site
 author: Waldeck Sodré
 
-gems:
-  - jekyll-sitemap
-
 # Build settings
 markdown: kramdown
 highlighter: pygments
