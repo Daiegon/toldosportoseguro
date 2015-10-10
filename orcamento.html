@@ -4,9 +4,9 @@ title: Nos envie seu Orçamento
 glyphicon:  th-list
 ---		
 
-<form action="https://getsimpleform.com/messages?form_api_token=3afa63d8a2309852b93b337cf92d0d49" method="post" enctype="multipart/form-data" role="form">
+<form action="https://getsimpleform.com/messages?form_api_token=3afa63d8a2309852b93b337cf92d0d49" method="post" enctype="multipart/form-data" role="form" id="orcamento">
 	<!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
-	<input type='hidden' name='redirect_to' value='{{site.url}}/orcamento/&envio=ok' />
+	<!-- <input type='hidden' name='redirect_to' value='{{site.url}}/orcamento/&envio=ok' /> -->
 	<!-- all your input fields here.... -->
 	<div class="row">
 		<div class="form-group col-sm-6">
@@ -38,6 +38,9 @@ glyphicon:  th-list
 		<div class="form-group col-sm-12">
 	  		<label for="message">Se preferir deixe algum comentário no  seu pedido:</label>
 			<textarea  class="form-control" rows="5" name="message"></textarea>
+		</div>
+		<div class="col-sm-12 text-center ok">
+			<div class="alert alert-success" role="alert"><strong>Enviado!</strong> Entraremos em contato por email ou telefone ;)</div>
 		</div>
 		<div class="form-group col-sm-12 text-center">
 			<input type='submit' class="btn btn-dark" value='ENVIAR ORÇAMENTO' />
