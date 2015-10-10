@@ -1,13 +1,13 @@
 <!DOCTYPE hmtl>
 <html lang="pt-BR">
 	<head>
-		<title>{% if page.title %} {{page.title}} - {% endif %} Toldos Porto Seguro {% if page.titleAfter %} - {{page.titleAfter}} {% endif %} </title>
+		<title>{% if page.title %} {{page.title}} - {% endif %} {{site.title}} {% if page.titleAfter %} - {{page.titleAfter}} {% endif %} </title>
 
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, inicial-scale=1, maximum-scale=1, user-scalable=no"/>
-		<meta name="description" content="">
-		<meta name="keywords" content="">
-		<meta name="author" content="">
+		<meta name="description" content="{{site.description}}">
+		<meta name="keywords" content="{{site.keywords}}">
+		<meta name="author" content="{{site.author}}">
 
 		<link rel="stylesheet" href="{{site.baseurl}}/source/css/bootstrap.min.css">
 		<link rel="stylesheet" href="{{site.baseurl}}/source/css/style.css">
@@ -24,18 +24,16 @@
 					<span class="glyphicon glyphicon-menu-hamburger"></span>
 					<select onchange="location = this.options[this.selectedIndex].value;">
 						<option value="#" selected disabled> - MENU -</option>
-						<option value="{{site.baseurl}}/">HOME</option>
-						<option value="{{site.baseurl}}/faq.html">FAQ</option>
-						<option value="{{site.baseurl}}/galeria.html">GALERIA</option>
-						<option value="{{site.baseurl}}/orcamento.html">ORÇAMENTO</option>
-						<option value="{{site.baseurl}}/empresa.html">A EMPRESA</option>
+						{% for link in site.links %}
+						<option value="{{ site.baseurl }}{{ link.url }}">{{link.title}}</option>
+						{% endfor %}
 					</select>
 				</div>
 				<div class="logo col-xs-10 col-md-3 text-center">
 					<h1>
 						<a href="{{site.baseurl}}/" title="Toldos Porto Seguro">
 							<img src="{{site.baseurl}}/source/images/toldos-porto-seguro.png" alt="Toldos Porto Seguro" width="300" class="hidden-sm hidden-xs img-responsive">
-							<p class="hidden-lg hidden-md">Toldos Porto Seguro</p>
+							<p class="hidden-lg hidden-md">{{site.title}}</p>
 						</a>
 					</h1>
 				</div>
@@ -98,7 +96,7 @@
 	<!-- FADE -->
 
 	<main id="container" class="container-fluid">
-		{% if page.url != '/index.html' %}
+		{% if page.url != '/' %}
 			<div id="content" class="container">
 				<div class="row">
 					<div class="col-md-10 col-md-offset-1 page-title">
@@ -107,7 +105,7 @@
 		{% endif %}
 
 					{{content}}
-		{% if page.url != '/index.html' %}
+		{% if page.url != '/' %}
 					</div>
 					<!-- /.col-md-8 col-md-offset-2 -->
 				</div>
