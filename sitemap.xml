@@ -4,13 +4,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	{% for page in site.pages %}
 		{% if page.layout %}
-			<loc>{{site.url}}{{page.url}}</loc>
+			<url>
+				<loc>{{site.url}}{{page.url}}</loc>
 				{% if page.changefreq %}
-					<changefreq>{{page.changefreq}}</changefreq>
+				<changefreq>{{page.changefreq}}</changefreq>
 				{% endif %}
 				{% if page.priority %}
-					<priority>{{page.priority}}</priority>
+				<priority>{{page.priority}}</priority>
 				{% endif %}
+			</url>
 		{% endif %}
 	{% endfor %}
 	
