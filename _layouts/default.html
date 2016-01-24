@@ -18,23 +18,26 @@
 		<link rel="stylesheet" href="{{site.baseurl}}/source/css/bootstrap.min.css">
 		<link rel="stylesheet" href="{{site.baseurl}}/source/css/style.css">
 		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-		
+
+		<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/source/css/lightbox.min.css" media="screen" />
+	
 		<!-- Facebook Pixel Code -->
+<!-- 
 		<script>
 		!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 		n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
 		n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
 		t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
 		document,'script','//connect.facebook.net/en_US/fbevents.js');
-		
-		fbq('init', '190880661249199');
-		fbq('track', "PageView");
-		fbq('track', 'ViewContent');
-		</script>
+
+		fbq('init', '160272264345672');
+		fbq('track', "PageView");</script>
 		<noscript><img height="1" width="1" style="display:none"
-		src="https://www.facebook.com/tr?id=190880661249199&ev=PageView&noscript=1"
+		src="https://www.facebook.com/tr?id=160272264345672&ev=PageView&noscript=1"
 		/></noscript>
-		<!-- End Facebook Pixel Code -->
+		 -->
+		<!-- End Facebook Pixel Code --> 
+
 	</head>
 <body>
 	
@@ -77,11 +80,13 @@
 	</header>
 	<!-- /header -->
 
-	<div class="navbar navbar-fixed-bottom header hidden-md hidden-lg">
-		<div class="row bottom">
-			<div class="container btn-ligue-sm">
+	<div class="navbar navbar-fixed-bottom bottom">
+		<div class="row">
+			<div class="container-fluid btn-ligue-sm">
 				<div class="col-xs-12">
-					<a href="javascript:void" data-toggle="modal" data-target="#telefones"><span class="glyphicon glyphicon-earphone"></span>Ligar</a>
+					<!-- <a href="javascript:void" onclick="ga('send', 'event', 'link','click', 'Clicou em Ligar');" data-toggle="modal" data-target="#telefones"><span class="glyphicon glyphicon-earphone"></span>Ligar</a> -->
+
+					<a href="javascript:void" onclick="ga('send', 'event', 'link','click', 'Clicou Ligamos para Você');" data-toggle="modal" data-target="#ligamos"><span class="glyphicon glyphicon-earphone"></span>Ligamos para Você</a>
 				</div>
 			</div>
 		</div>
@@ -100,15 +105,62 @@
 	      <div class="modal-body">
 	      	<div class="row">
 	      		<div class="col-sm-12">
-	      			<a href="tel:02130692270" class="btn btn-dark">FIXO -RJ</a>
+	      			<a href="tel:021{{site.fixo}}" onclick="ga('send', 'event', 'link','click', 'Clicou Tel Fixo');" class="btn btn-dark">FIXO -RJ</a>
 	      		</div>
 	      		<div class="col-sm-12">
-	      			<a href="tel:021998619051" class="btn btn-dark">CELULAR -RJ</a>
+	      			<a href="tel:021{{site.whatsapp}}" onclick="ga('send', 'event', 'link','click', 'Clicou Tel Celular');" class="btn btn-dark">CELULAR -RJ</a>
 	      		</div>
 	      	</div>
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- Modal -->
+
+	<!-- Modal -->
+	<div id="ligamos" class="modal fade" role="dialog">
+	  <div class="modal-dialog modal-md">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">Agende AGORA uma Ligação:</h4>
+	      </div>
+	      <div class="modal-body">
+	      	<div class="row">
+	      		<div class="col-lg-12">
+		      		<form name="sentMessage" id="contactForm" novalidate>
+	                    <div class="row control-group">
+	                        <div class="form-group col-xs-12 floating-label-form-group controls">
+	                            <label>SEU NOME: </label>
+	                            <input type="text" class="form-control" placeholder="Nome" id="nome" required data-validation-required-message="Por favor digite seu nome.">
+	                            <p class="help-block text-danger"></p>
+	                        </div>
+	                    </div>
+	                    <div class="row control-group">
+	                        <div class="form-group col-xs-12 floating-label-form-group controls">
+	                            <label>CELULAR: </label>
+	                            <input type="tel" class="form-control" placeholder="Celular" id="telefone" required data-validation-required-message="Por favor informe o Celular." >
+	                            <p class="help-block text-danger"></p>
+	                        </div>
+	                    </div>
+	                
+	                    <div class="load col-lg-12 text-center">
+	                    	<img src="../source/images/loading.gif" alt=""> 
+	                    </div>
+
+	                    <div class="form-group col-xs-12 text-center">
+	                        <button type="submit" id="cliqueCadastrar" class="btn btn-success btn-lg" onclick="ga('send', 'event', 'link','click', 'Clicou para se Cadastrar');">
+	                        <span class="glyphicon glyphicon-earphone"></span>  RECEBER LIGAÇÃO</button> 
+	                    </div>
+	                </form>
+	      		</div>
+	      		<!-- /.col-lg-12 -->
+	      	</div>
 	      </div>
 	    </div>
 	  </div>
@@ -157,9 +209,15 @@
 		<!-- /.row -->
 	</footer>
 
-	<script src="{{site.baseurl}}/source/js/jquery.js"></script>
+	<script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
 	<script src="{{site.baseurl}}/source/js/bootstrap.min.js"></script>
+	<script src="{{site.baseurl}}/source/js/jqBootstrapValidation.js"></script>
+	<script src="{{site.baseurl}}/source/js/processaCadastro.js"></script>
+	<script src="{{site.baseurl}}/source/js/lightbox.min.js"></script>
+	
+	{% include scripts.html %}
 
+	<!-- 
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -170,7 +228,6 @@
 	  ga('send', 'pageview');
 
 	</script>
-
-	{% include scripts.html %}
+ 	-->
 </body>
 </html>

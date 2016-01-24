@@ -156,38 +156,69 @@ body{
 		}
 	}
 
-	.bottom{
-		box-shadow: 0px 5px 30px 5px #000;
-		
-		div{
-			padding: 0 !important;
-		}
+	
+} 
 
-		.btn-ligue-sm{
-			background-color: #1baa2c;
-		}
+.bottom{
+	height: 50px;
+	box-shadow: 0px 5px 30px 5px #000;
+	border: none !important;
+	
+	div{
+		padding: 0 !important;
+	}
 
-		a{	
-			line-height: 50px;
-			height: 50px;
-			font-size: 1.5em;
-			display: block;
-			text-decoration: none;
-			color: @clara;
-			text-align: center;
-			text-transform: uppercase;
-			font-weight: bold;
-			&:hover{
-				background: @escura;
-				color: @secundaria;
-			}
-			span{
-				margin: 10px 15px 0 0;
-				//font-size: 2em;
-			}
+	.btn-ligue-sm{
+		background-color: #1baa2c;
+	}
+
+	a{	
+		line-height: 50px;
+		height: 50px;
+		font-size: 1.5em;
+		display: block;
+		text-decoration: none;
+		color: @clara;
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: bold;
+		&:hover{
+			background: @escura;
+			color: @secundaria;
+		}
+		span{
+			margin: 10px 15px 0 0;
+			//font-size: 2em;
 		}
 	}
-} 
+}
+
+.google-maps{
+	position: relative;
+	padding-bottom: 45%;
+	height: 0;
+	overflow: hidden;
+	iframe{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100% !important;
+		height: 100% !important;
+	}
+}
+
+.tel{
+	font-size: 2em;
+	color: #1baa2c;
+}
+.share{
+	font-size: 2.5em;
+	color: @secundaria;
+}
+
+.load{
+	display: none;
+}
 
 #telefones{
 	top: 20%;
@@ -356,6 +387,44 @@ footer{
 
 .ok{
 	display: none;
+}
+
+.formulario{
+	font-size: 1.5em;
+	border-top: 1px dashed @principal; 
+	padding: 15px 0 0 0;
+	input{
+		padding: 30px 15px;
+		font-size: 1.8em;
+	}
+	.form-group{
+		margin-bottom: 20px;
+	}
+	label{
+		text-transform: uppercase;
+	}
+	.load{
+		display: none;
+	}
+	p.privacidade{
+		clear: both;
+		margin: 40px 0 30px 0;
+		padding: 15px 0 0 0;
+		border-top: 1px dashed @principal; 
+		text-align: justify; 
+	}
+}
+
+.help-block{
+	li{
+		list-style: none;
+		padding: 10px 5px;
+	}
+	&.text-danger{
+		background-color: #ea6767;
+		color: #6b0505;
+		font-weight: bolder;
+	}
 }
 
 /**** SMALL SCREEN col-sm ******/

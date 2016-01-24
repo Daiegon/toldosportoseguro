@@ -1,0 +1,48 @@
+---
+layout: default
+title: Obrigado por seu Cadastro!
+glyphicon: thumbs-up
+---
+
+<div class="row">
+	<div class="col-lg-12 text-center titulo">
+		<h3>Converse com o Whatsapp do Vendedor abaixo:</h3>
+		
+		<p class="tel hidden-xs hidden-sm">WhatsApp: 21 {{site.whatsapp}}</p>
+		
+		<a href="intent://send/5521{{site.whatsapp}}#Intent;scheme=smsto;package=com.whatsapp;action=android.intent.action.SENDTO;end" class="btn btn-lg btn-success hidden-sm hidden-lg" onclick="ga('send', 'event', 'link','click', 'Clicou Falar com o Vendedor');">
+			FALAR COM O VENDEDOR
+		</a>
+		
+		<hr>
+
+	</div>
+	<!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+
+<div class="row">
+	<div class="col-lg-8 col-lg-offset-2">
+		<div class="compartilha text-center">
+			<p class="share">Compartilhe com seus Amigos!</p>
+			<p>Use os Botões abaixo:</p>
+			<a href="whatsapp://send?text=Oi, estou vendo aqui Toldos e Coberturas. É bem interessante o que eles tem no site, você também poderia ver, clica aqui >> {{site.url}} " class="btn btn-lg btn-success hidden-sm hidden-lg" onclick="ga('send', 'event', 'link','click', 'Clicou Compartilhar no WhatsApp');">
+				COMPARTILHAR WHATSAPP
+			</a>
+			<div class="cleafix"></div>
+
+			<br>
+
+			<a href="http://www.facebook.com/sharer/sharer.php?u={{site.url}}" class="btn btn-lg btn-primary" onclick="ga('send', 'event', 'link','click', 'Clicou Compartilhar no Facebook');">		
+				COMPARTILHAR FACEBOOK
+			</a>
+
+			<div class="cleafix"></div>
+
+			<br>
+
+			<a href="http://www.facebook.com/portosegurotoldos/" onclick="ga('send', 'event', 'link','click', 'Clicou Página Facebook ');" target="_blank" class="btn btn-dark">ACESSE A PÁGINA DO FACEBOOK</a>
+		</div>
+	</div>
+</div>
+<!-- /.row -->

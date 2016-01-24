@@ -1,13 +1,15 @@
 # Site settings
-title: Toldos Porto Seguro 
+title: Toldos e Coberturas Porto Seguro 
 email: toldosportoseguro@ig.com.br
 description: > # this means to ignore newlines until "baseurl:"
-  Trabalhamos com Toldos, Esquadrias de Alumínio, Persianas, Estrutura em Policarbonato, Manutenção e Reforma de Toldos, Lavagem de Toldo. Atendemos Barra da Tijuca, Recreio e Jacarepagua
+  Trabalhamos com Toldos, Coberturas de Lonas, Esquadrias de Alumínio, Persianas, Estrutura em Policarbonato, Manutenção e Reforma de Toldos, Lavagem de Toldo. Atendemos Barra da Tijuca, Recreio e Jacarepagua
 keywords: > #
-  Toldos Rj, Toldos no Recreio, Toldos na Barra, Capota para Janela, Toldo
+  Toldos Rj, Toldos no Recreio, Toldos na Barra, Capota para Janela, Toldos e Coberturas, Coberturas de Lonas
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://toldosportoseguro.com.br" # the base hostname & protocol for your site
+url: "http://www.toldosportoseguro.com.br/" # the base hostname & protocol for your site
 author: Waldeck Sodré
+fixo: "3069-2270"
+whatsapp: "964956590"
 
 # Build settings
 markdown: kramdown
