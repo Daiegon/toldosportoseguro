@@ -92,7 +92,7 @@
 			<div class="container-fluid btn-ligue-sm">
 				<div class="col-xs-12">
 
-					<a href="javascript:void" onclick="ga('send', 'event', 'link','click', 'Clicou Ligamos para Você');" data-toggle="modal" data-target="#ligamos"><span class="glyphicon glyphicon-earphone"></span>Ligamos para Você</a>
+					<a href="javascript:void" onclick="ga('send', 'event', 'link','click', 'Clicou Botão Ligamos para Você');" data-toggle="modal" data-target="#ligamos"><span class="glyphicon glyphicon-earphone"></span>Ligamos para Você</a>
 				</div>
 			</div>
 		</div>
@@ -107,36 +107,17 @@
 	    <div class="modal-content">
 	      <div class="modal-header">
 	        <button type="button" class="close" data-dismiss="modal">&times;</button>
-	        <h4 class="modal-title">Agende AGORA uma Ligação:</h4>
+	        <h4 class="modal-title">Tire suas dúvidas aqui:</h4>
 	      </div>
 	      <div class="modal-body">
 	      	<div class="row">
-	      		<div class="col-lg-12">
-		      		<form name="sentMessage" id="contactForm" novalidate>
-	                    <div class="row control-group">
-	                        <div class="form-group col-xs-12 floating-label-form-group controls">
-	                            <label>SEU NOME: </label>
-	                            <input type="text" class="form-control" placeholder="Nome" id="nome" required data-validation-required-message="Por favor digite seu nome.">
-	                            <p class="help-block text-danger"></p>
-	                        </div>
-	                    </div>
-	                    <div class="row control-group">
-	                        <div class="form-group col-xs-12 floating-label-form-group controls">
-	                            <label>CELULAR: </label>
-	                            <input type="tel" class="form-control" placeholder="Celular" id="telefone" required data-validation-required-message="Por favor informe o Celular." >
-	                            <p class="help-block text-danger"></p>
-	                        </div>
-	                    </div>
-	                
-	                    <div class="load col-lg-12 text-center">
-	                    	<img src="../source/images/loading.gif" alt=""> 
-	                    </div>
-
-	                    <div class="form-group col-xs-12 text-center">
-	                        <button type="submit" id="cliqueCadastrar" class="btn btn-success btn-lg" onclick="ga('send', 'event', 'link','click', 'Clicou para se Cadastrar');">
-	                        <span class="glyphicon glyphicon-earphone"></span>  RECEBER LIGAÇÃO</button> 
-	                    </div>
-	                </form>
+	      		<div class="col-lg-12 text-center">
+		      		<p>Fale AGORA com nosso atendimento sobre sua necessidade:</p>
+		      		<a href="http://fb.com/msg/portosegurotoldos/" target="_blank" class="btn btn-lg btn-primary"
+		      		 onclick="ga('send', 'event', 'link','click', 'Clicou Botão Messenger');" >
+		      			<span class="glyphicon glyphicon-comment"></span>
+						Iniciar Conversa Online
+		      		</a>
 	      		</div>
 	      		<!-- /.col-lg-12 -->
 	      	</div>
@@ -154,7 +135,8 @@
 			<div id="content" class="container">
 				<div class="row">
 					<div class="col-md-10 col-md-offset-1 page-title">
-						<div class="col-md-1 col-md-offset-2 text-center"><span class="glyphicon glyphicon-{{page.glyphicon}} icone-pagina"></span></div>
+						<div class="col-md-1 col-md-offset-2 text-center">
+						<span class="glyphicon glyphicon-{{page.glyphicon}} icone-pagina"></span></div>
 						<div class="col-md-9"><h2>{{page.title}}</h2></div>
 		{% endif %}
 
